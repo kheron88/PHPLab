@@ -8,10 +8,13 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        
     </head>
     <body>
+        <a href="week1/index.php">Week 1 HW</a>
         <?php
         // put your code here
+        
         ?>
     </body>
 </html>

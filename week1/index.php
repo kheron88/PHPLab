@@ -13,7 +13,7 @@ and open the template in the editor.
     <body>
         <h1>Week 1 Lab</h1>
         <!--Create three string variables. -->
-        <h4>1a: Create three string variables.  Two that have a value, and the third that will concatenate the first two.</h4>
+        <h4>1.a: Create three string variables.  Two that have a value, and the third that will concatenate the first two.</h4>
         
         <?php 
             $firstname = 'Korey';
@@ -24,22 +24,22 @@ and open the template in the editor.
             $fullname = $firstname . ' ' . $lastname;
             echo $fullname, "<br />";
         ?> 
-        <h4>1b: Create three array variables.</h4>
+        <h4>1.b: Create three array variables.</h4>
             <h5>1. Array one with just 5 values:</h5>
         <?php 
             //Array one with just 5 values
             $array5 = array("one","two","three","four","five");
             print_r($array5);
-            echo "<\ n>";
+            echo "<br />";
         ?>        
             <h5>2. Array two with five key=>value pairs:</h5>    
         <?php 
             //Array two with five key=>value pairs
             echo "";
             $array5key = array(
-                    "Korey" => "First Name",
-                    "Heron" => "Last Name",
-                    500   => "$500.00",
+                    "First Name" => "Korey",
+                    "Last Name" => "Heron" , 
+                    "Amount" => "$500.00",
                     "State"  => "RI",
                     "City" => "Warwick");
             var_dump($array5key);
@@ -58,7 +58,23 @@ and open the template in the editor.
                                                                     "8" => "EIGHT",
                                                                     "9" => "NINE")
                                                                     );
-            echo $arraymulti["multi1"]["1"];
+            
+            print_r($arraymulti);
+            echo "<br />";
+            /* Print each record in array
+            
+            if (count($arraymulti))
+            
+            {
+                $arraymultiValue = $arraymulti;
+                foreach ($arraymulti as $arraymultiValue)
+                {
+                    echo $arraymultiValue;
+                };
+                
+            };
+            */
+                       echo $arraymulti["multi1"]["1"];
             echo $arraymulti["multi1"]["2"];
             echo $arraymulti["multi1"]["3"];
             echo $arraymulti["multi2"]["4"];
@@ -155,7 +171,7 @@ and open the template in the editor.
             }
         
         ?>
-            <h4>1d: Use these array functions in your code: array_count_values, 
+            <h4>1.d: Use these array functions in your code: array_count_values, 
                 array_flip, array_key_exists, array_map, array_rand, array_push, in_array, shuffle, count/sizeof, sort, in_array  </h4>
                 
                 <h5>array_count_values function: </h5>
@@ -255,6 +271,16 @@ and open the template in the editor.
             }
 
         ?>
-          
+                <h4>1.e: Create an HTML table with 100 rows.  For each alternate row have the background color be set to silver.   
+                    You can apply a class to each alternate row.  Do not use CSS tricks.  
+                    Output the row number, execute the token function and display the date and time.</h4>
+                
+        <?php
+        
+            
+        ?>
+                <h4>1.f: Create 2 arrays.  One with a list of colors and the other with a list of phrases.  
+                    Get a random color and phrase to display on every page load.</h4>
+                
     </body>
 </html>

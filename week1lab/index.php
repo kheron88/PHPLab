@@ -61,20 +61,8 @@ and open the template in the editor.
             
             print_r($arraymulti);
             echo "<br />";
-            /* Print each record in array
-            
-            if (count($arraymulti))
-            
-            {
-                $arraymultiValue = $arraymulti;
-                foreach ($arraymulti as $arraymultiValue)
-                {
-                    echo $arraymultiValue;
-                };
-                
-            };
-            */
-                       echo $arraymulti["multi1"]["1"];
+
+             echo $arraymulti["multi1"]["1"];
             echo $arraymulti["multi1"]["2"];
             echo $arraymulti["multi1"]["3"];
             echo $arraymulti["multi2"]["4"];

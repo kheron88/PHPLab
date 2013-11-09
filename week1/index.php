@@ -276,7 +276,9 @@ and open the template in the editor.
                     Output the row number, execute the token function and display the date and time.</h4>
                 
         <?php
-            function token() {	
+            //create table with 100 rows.
+        
+        function token() {	
                 return sha1( uniqid(mt_rand(), true) );
             }
             
@@ -295,5 +297,14 @@ and open the template in the editor.
                 <h4>1.f: Create 2 arrays.  One with a list of colors and the other with a list of phrases.  
                     Get a random color and phrase to display on every page load.</h4>
                 
+        <?php
+                $colors = array("blue", "green", "black");
+                $phrases = array("PHP", "HTML", "JAVASCRIPT");
+                $colorsRand = array_rand($colors, 2);
+                $phrasesRand = array_rand($phrases, 2);
+                
+                echo "<p style=\"color:", $colors[$colorsRand[0]], ";\">", $phrases[$phrasesRand[0]], "</p>";
+         
+          ?>  
     </body>
 </html>

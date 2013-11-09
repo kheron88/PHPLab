@@ -276,8 +276,21 @@ and open the template in the editor.
                     Output the row number, execute the token function and display the date and time.</h4>
                 
         <?php
-        
+            function token() {	
+                return sha1( uniqid(mt_rand(), true) );
+            }
             
+            $row = "1";
+            echo "<table border='1'>";
+            echo "<tr><td>Row Number</td><td>Token</td><td>Date & Time</td></tr>";
+            while ($row < 100 ){
+                echo "<tr><td>", $row, "</td><td>", token(), "</td><td>", date('m-d-y h:i'), "</td></tr>";
+                $row++;
+                echo "<tr style=\"background-color: #D0D0D0;\"><td>", $row, "</td><td>", token(), "</td><td>", date('m-d-y h:i'), "</td></tr>";
+                $row++;
+            }
+            echo "</table>";
+
         ?>
                 <h4>1.f: Create 2 arrays.  One with a list of colors and the other with a list of phrases.  
                     Get a random color and phrase to display on every page load.</h4>

@@ -15,7 +15,6 @@ and open the template in the editor.
         // put your code here        
         Login::confirmAccess();
         
-        
         $gb = new Guestbook();
         $gb->processGuestbook();
         $gb->displayGuestbook();
@@ -52,6 +51,8 @@ and open the template in the editor.
         <?php 
         if( !empty($entryErrors["comments"]) ) {
            echo '<p>',$entryErrors["comments"],'</p>';
+        }else{
+            echo '<p>Please fill in a comment.</p>';
         }
         ?>     
      <br />

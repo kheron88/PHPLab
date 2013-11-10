@@ -9,7 +9,7 @@
 /**
  * Description of DB
  *
- * @author gforti
+ * @author kheron 867416
  */
 class DB {
     //put your code here

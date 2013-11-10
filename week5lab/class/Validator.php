@@ -9,7 +9,7 @@
 /**
  * Description of Validator
  *
- * @author gforti
+ * @author kheron
  */
 class Validator {
     //put your code here

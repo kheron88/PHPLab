@@ -9,7 +9,7 @@
 /**
  * Description of Guestbook
  *
- * @author GFORTI
+ * @author kheron
  */
 class Guestbook extends DB {
     //put your code here
@@ -32,6 +32,7 @@ protected $errors = array();
         
         if ( count($results) ) {
             echo "<table border='1'>";
+            echo "<tr><td>Name</td><td>E-mail</td><td>Comments</td></tr>";
             foreach($results as $row) {
                 echo "<tr><td>", $row["name"], "</td><td>", $row["email"],
                         "</td><td>", $row["comments"], "</td></tr>";
@@ -49,7 +50,7 @@ protected $errors = array();
         if (Validator::nameIsValid($_POST["name"])){
             return true;
     } else{
-        $this->errors["email"] = "Email is not valid.";
+        $this->errors["name"] = "Please enter a valid Name.";
     }
         
     }
@@ -61,7 +62,7 @@ protected $errors = array();
         if (Validator::emailIsValid($_POST["email"])){
             return true;
         }else{
-        $this->errors["email"] = "Email is not valid.";
+        $this->errors["email"] = "Please enter a valid Email.";
     }
     } 
 }
@@ -96,7 +97,7 @@ public function entryIsValid(){
     $this->checkName();
     $this->checkEmail();
     $this->checkComments();
-    //return ( count($this->errors) ? false : true );
+    return ( count($this->errors) ? false : true );
 }
     
     public function processGuestbook(){

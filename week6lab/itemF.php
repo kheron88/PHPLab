@@ -84,7 +84,7 @@ and open the template in the editor.
 		
 		?>
 		
-		<form name="addressbook" action="#" method="post">
+	<form name="addressbook" action="#" method="post">
             
             Name: <input type="text" name="name" /><br />
             Address: <input type="text" name="address" /><br />

@@ -22,18 +22,13 @@ and open the template in the editor.
             if ( $signupClass->entryIsValid() ) {
                 $signupClass->saveEntry();
                 echo "entry was saved";
-                //you show a save entry message and have a link to the login page
-                // or just redirect to the login page -  header("Location:login.php");
-                header("Location: admin.php");
-                
+                header("Location: admin.php");               
             } else {
-                $entryErrors = $signupClass->getErrors();
-                
+                $entryErrors = $signupClass->getErrors();                
             }
             
         }
-        
-        
+
         ?>
         
          <form name="mainform" action="signup.php" method="post">

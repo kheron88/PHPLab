@@ -18,6 +18,10 @@ and open the template in the editor.
         /*
          * If user is logged in redirect to admin page.
          */
+        if ( isset($_SESSION["isLoggedin"]) && $_SESSION["isLoggedin"] == true ) {
+        header("Location: admin.php");
+        }        
+        
         
         include 'Config.php';
         include 'validator.php';

@@ -24,7 +24,7 @@ and open the template in the editor.
          */
         
             if (count($_GET) ){
-                if ($_GET["logout"] =  "2"){
+                if ($_GET["logout"] ==  1){
                 echo "logout";
                 session_destroy();
                 header("Location:login.php");

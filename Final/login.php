@@ -52,7 +52,8 @@ and open the template in the editor.
             <input type="hidden" name="email" value="" />
           
             <input type="submit" value="Submit" />
-            
+            <br />
+            <a href="signup.php">Sign Up Page</a>  
         </form>
         
     </body>

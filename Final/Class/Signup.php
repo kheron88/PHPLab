@@ -9,7 +9,7 @@
 /**
  * Description of Signup
  *
- * @author gforti
+ * @author kheron
  */
 class Signup extends DB {
     //put your code here
@@ -54,7 +54,11 @@ class Signup extends DB {
     public function usernameEntryIsValid() {
         
         //if ( $this->userNameIsTaken() )
-        $this->errors["username"] = "Sorry username is taken."; 
+        
+        if ($this->userNameIsTaken($_POST["username"])) {
+            
+            $this->errors["username"] = "Sorry username is taken."; 
+        }
         
         return ( empty($this->errors["username"]) ? true : false ) ;
     }

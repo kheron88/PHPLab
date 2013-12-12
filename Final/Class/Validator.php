@@ -15,10 +15,10 @@ class Validator {
     //put your code here
       
     public static function emailIsValid( $str ) {
-        if ( is_string($str) && !empty($str) ) {
-            return true;
-        }        
-        return false; 
+       if ( is_string($str) && !empty($str) && preg_match("/[A-Za-z0-9_]{2,}+@[A-Za-z0-9_]{2,}+\.[A-Za-z0-9_]{2,}/",$str) != 0 ) {
+           return true;
+       }        
+       return false;  
     }
     
     public static function usernameIsValid( $str ) {
@@ -36,7 +36,7 @@ class Validator {
     }
     
      public static function loginIsValid( $username, $password ) {
-        //$password = sha1($password);
+        $password = sha1($password);
         $db = new PDO(Config::DB_DNS ,Config::DB_USER,Config::DB_PASSWORD);
         
         $stmt = $db->prepare('select * from signup where username = :usernameValue limit 1');

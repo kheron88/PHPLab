@@ -43,4 +43,7 @@ if ( Validator::usernameIsValid($username)
 
 }
 
+include 'signup.php';
+
+
 ?>

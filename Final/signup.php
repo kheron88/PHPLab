@@ -12,7 +12,6 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
         
         $entryErrors = array();
         
@@ -22,11 +21,14 @@ and open the template in the editor.
             
             if ( $signupClass->entryIsValid() ) {
                 $signupClass->saveEntry();
+                echo "entry was saved";
                 //you show a save entry message and have a link to the login page
                 // or just redirect to the login page -  header("Location:login.php");
+                header("Location: admin.php");
                 
             } else {
                 $entryErrors = $signupClass->getErrors();
+                
             }
             
         }
@@ -55,8 +57,8 @@ and open the template in the editor.
                  }
             ?>
             <input type="submit" value="Submit" />
-            <a href="login.php">Login</a>
-            
+            <br />
+            <a href="login.php">Login</a>            
         </form>
         
     </body>
